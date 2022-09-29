@@ -17,7 +17,7 @@ header {
             li {
                 list-style: none;
                 margin-right: 20px;
-                a{
+                a {
                     text-decoration: none;
                     font-weight: bold;
                     color: #222;
@@ -26,6 +26,10 @@ header {
             }
         }
     }
+}
+
+header.footer-link-a > nav > ul li a {
+    color: #fff;
 }
 
 section.full-banner {
@@ -121,3 +125,4 @@ button:hover {
     width: auto;
     height: 24px;
 }
+

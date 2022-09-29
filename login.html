@@ -29,20 +29,31 @@
 
     <section class="full-banner-form">
         <div class="container-login">
-            <form action="" class="form-login">
+            <form action="" method="post" action="cadastro.php" class="form-login">
+
                 <label for="login">
                     CPF*:
-                    <input type="text" name="login" id="login" placeholder="Digite o CPF">
+                    <input type="text" name="login" required id="login" placeholder="Digite o CPF"
+                    pattern="/(\d{3})(\d{3})(\d{3})(\d{2})/"
+                    onivalid="this.setCustomValidity('Preencha o campo CPF')"
+                    oninput="this.setCustomValidity('')"/>
                 </label>
+
                 <label for="password">
                     Senha*:
-                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                    <input type="password" name="password" required id="password" 
+                    placeholder="Digite sua senha" pattern="(?=.*\d)(?=.*[A-Z]).{8,}"
+                    title="A senha deve conter, ao menos uma letra minúscula, uma letra maiúscula,
+                    um número e pelo menos 8 caracteres" />
                 </label>
+
                 <button type="submit">Continuar</button>
                 <p><a href="#">Esqueci minha senha</a></p>
                 <p><a href="#">Ainda não sou cliente</a></p>
             </form>
         </div>
     </section>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 </html> 
